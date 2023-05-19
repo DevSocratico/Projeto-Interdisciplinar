@@ -1,0 +1,44 @@
+:root {
+    --cor-menu: #C2E7D5;
+    --cor-fundo-pagina: #A2CACC;
+}
+
+body {
+    background-color: var(--cor-fundo-pagina);
+}
+
+.cor-menu {
+    background-color: var(--cor-menu);
+}
+
+.container-cards {
+    padding: 2% 5%;
+}
+
+.tamanho-card-destaques {
+    width: 30rem;
+    height: 25rem;
+}
+
+.tamanho-imagem-produto-destaques {
+    width: 130px;
+}
+
+.carouselImg {
+    width: 100%;
+    height: 300px;
+}
+
+.logotipo-sem-nome {
+    display: none;
+}
+
+@media (max-width: 575.98px) {
+    .logotipo-sem-nome {
+        display: show;
+    }
+    
+    .logotipo {
+        display: none;
+    }
+}
