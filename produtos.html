@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="navbar-brand d-none d-md-block d-lg-block" href="index.html">
+            <img src="imgs/logotipo.png" alt="Logotipo">
+        </a>
+        <a class="navbar-brand d-md-none d-lg-none" href="index.html">
+            <img src="imgs/logo-mobile.png" alt="Logo Mobile">
+        </a>
+        <form class="d-flex justify-content-center w-50" method="GET" action="produtos.html">
+            <input class="form-control me-2 w-50" type="search" name="pesquisa" id="barraPesquisa" placeholder="Pesquisar produtos" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Entrar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Usuário</label>
+                            <input type="text" class="form-control" id="username" placeholder="Digite seu usuário">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+                        </div>
+                        <div class="mb-3">
+                            <a href="#">Recuperar senha</a>
+                        </div>
+                        <div class="mb-2 d-grid">
+                            <button class="btn btn-primary" type="submit">Entrar</button>
+                        </div>
+                        <div class="mb-2 d-grid">
+                            <button class="btn btn-secondary" type="submit">Criar conta</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Localização -->
+    <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mapModalLabel">Filtrar farmácias pela localização</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="place" placeholder="Digite seu endereço">
+                        </div>
+                        <div class="mb-3">
+                            <img src="imgs/google-maps.png" alt="Google Maps" width="100%" height="350px">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit">Filtrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Filtro -->
+            <div class="col-lg-3">
+                <h4>Filtro</h4>
+                <div class="row mb-2">
+                    <div class="col-lg-12">
+                        <label for="pharmacies">Farmácias</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="drogaVen">
+                            <label class="form-check-label" for="drogaVen">
+                                DrogaVen
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="drogaRaia">
+                            <label class="form-check-label" for="drogaRaia">
+                                Droga Raia
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-lg-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="ultrafarma">
+                            <label class="form-check-label" for="ultrafarma">
+                                Ultrafarma
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-lg-12">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#mapModal">Localização</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produtos -->
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="imgs/remedio.png" class="card-img-top" alt="Produto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Produto 1</h5>
+                                <p class="card-text">R$ 0,00</p>
+                                <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="imgs/remedio.png" class="card-img-top" alt="Produto 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Produto 2</h5>
+                                <p class="card-text">R$ 0,00</p>
+                                <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="imgs/remedio.png" class="card-img-top" alt="Produto 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Produto 3</h5>
+                                <p class="card-text">R$ 0,00</p>
+                                <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="imgs/remedio.png" class="card-img-top" alt="Produto 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Produto 4</h5>
+                                <p class="card-text">R$ 0,00</p>
+                                <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="imgs/remedio.png" class="card-img-top" alt="Produto 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Produto 5</h5>
+                                <p class="card-text">R$ 0,00</p>
+                                <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="imgs/remedio.png" class="card-img-top" alt="Produto 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Produto 6</h5>
+                                <p class="card-text">R$ 0,00</p>
+                                <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const pesquisa = urlParams.get('pesquisa');
+
+        const barraPesquisa = document.getElementById('barraPesquisa');
+        barraPesquisa.value = pesquisa;
+    </script>
+</body>
+</html>
