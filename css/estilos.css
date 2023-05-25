@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=McLaren');
+
 /* variáveis */
 :root {
     --cor-fundo-pagina: #e6f6eb;
@@ -5,6 +7,7 @@
 
 body {
     background-color: var(--cor-fundo-pagina);
+    font-family: 'McLaren', sans-serif;
 }
 
 /* imagem do carousel */
@@ -14,7 +17,11 @@ body {
 
 /* imagem do card */
 .card img {
-    height: 130px;
+    height: 350px;
+}
+
+.card .produto-relacionado {
+    height: 250px;
 }
 
 /* chat */
@@ -22,7 +29,7 @@ body {
     position: fixed;
     bottom: 0px;
     right: 20px;
-    width: 300px;
+    width: 350px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -38,7 +45,7 @@ body {
 
 .chat .chat-body {
     padding: 10px;
-    height: 200px;
+    height: 300px;
 }
 
 .chat .chat-footer {
