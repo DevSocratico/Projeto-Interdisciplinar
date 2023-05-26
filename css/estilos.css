@@ -3,11 +3,14 @@
 /* variáveis */
 :root {
     --cor-fundo-pagina: #e6f6eb;
+    --cor-facebook-icone: #3b5998;
+    --cor-whatsapp-icone: #25d366;
 }
 
 body {
     background-color: var(--cor-fundo-pagina);
     font-family: 'McLaren', sans-serif;
+    height: 100%;
 }
 
 /* imagem do carousel */
@@ -22,6 +25,19 @@ body {
 
 .card .produto-relacionado {
     height: 250px;
+}
+
+.card .equipe {
+    height: 250px;
+}
+
+/* cores ícones */
+.cor-facebook-icone {
+    background-color: var(--cor-facebook-icone);
+}
+
+.cor-whatsapp-icone {
+    background-color: var(--cor-whatsapp-icone);
 }
 
 /* chat */
