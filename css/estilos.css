@@ -5,6 +5,7 @@
     --cor-fundo-pagina: #e6f6eb;
     --cor-facebook-icone: #3b5998;
     --cor-whatsapp-icone: #25d366;
+    --cor-botao-accordion: #f8f9fa;
 }
 
 body {
@@ -38,6 +39,15 @@ body {
 
 .cor-whatsapp-icone {
     background-color: var(--cor-whatsapp-icone);
+}
+
+/* accordion */
+.accordion-button {
+    background-color: var(--cor-botao-accordion);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--cor-botao-accordion);
 }
 
 /* chat */
