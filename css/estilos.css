@@ -10,8 +10,12 @@
 
 body {
     background-color: var(--cor-fundo-pagina);
-    font-family: 'McLaren', sans-serif;
     height: 100%;
+}
+
+/* fonte títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'McLaren', sans-serif;
 }
 
 /* imagem do carousel */
