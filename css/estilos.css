@@ -36,6 +36,11 @@ h1, h2, h3, h4, h5, h6 {
     height: 250px;
 }
 
+/* imagem produto (ver detalhes) */
+.produto-detalhe {
+    height: 512px;
+}
+
 /* cores ícones */
 .cor-facebook-icone {
     background-color: var(--cor-facebook-icone);
@@ -57,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 /* chat */
 #chat-icon {
     position: fixed;
-    bottom: 200px;
+    bottom: 40px;
     right: 40px;
     cursor: pointer;
 }
