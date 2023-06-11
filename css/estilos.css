@@ -3,14 +3,73 @@
 /* variáveis */
 :root {
     --cor-fundo-pagina: #e6f6eb;
+    --cor-fundo-menu: #f8f9fa;
+    --cor-texto: #000;
     --cor-facebook-icone: #3b5998;
     --cor-whatsapp-icone: #25d366;
     --cor-botao-accordion: #f8f9fa;
 }
 
+:root[data-theme='dark'] {
+    --cor-fundo-pagina: #1e1e1e;
+    --cor-fundo-menu: #5b5b5b;
+    --cor-texto: #fff;
+}
+
 body {
     background-color: var(--cor-fundo-pagina);
+    color: var(--cor-texto);
     height: 100%;
+}
+
+/* botões */
+.btn-primary {
+    background-color: #2b45f5;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2b45f5;
+}
+
+/* menu */
+.menu {
+    background-color: var(--cor-fundo-menu);
+}
+
+.menu .nav-link {
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: var(--cor-texto)!important;
+}
+
+.menu .nav-link:hover {
+    border-color: var(--cor-texto);
+    color: var(--cor-texto);
+}
+
+.menu .active {
+    font-weight: bolder;
+}
+
+/* footer */
+footer {
+    background-color: var(--cor-fundo-menu);
+    color: var(--cor-texto);
+}
+
+footer a {
+    color: var(--cor-texto);
+}
+
+/* filtro */
+.filtro {
+    background-color: var(--cor-fundo-menu);
+    color: var(--cor-texto);
+}
+
+/* modal */
+.modal {
+    color: #000;
 }
 
 /* fonte títulos */
@@ -53,10 +112,12 @@ h1, h2, h3, h4, h5, h6 {
 /* accordion */
 .accordion-button {
     background-color: var(--cor-botao-accordion);
+    color: #000;
 }
 
 .accordion-button:not(.collapsed) {
     background-color: var(--cor-botao-accordion);
+    color: #000;
 }
 
 /* chat */
@@ -77,6 +138,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 4px;
     z-index: 1;
     display: none;
+    color: #000;
 }
 
 .chat .chat-header {
