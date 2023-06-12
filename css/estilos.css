@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* imagem produto (ver detalhes) */
 .produto-detalhe {
-    height: 512px;
+    height: 400px;
 }
 
 /* cores ícones */
@@ -123,9 +123,10 @@ h1, h2, h3, h4, h5, h6 {
 /* chat */
 #chat-icon {
     position: fixed;
-    bottom: 40px;
+    bottom: 120px;
     right: 40px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .chat {
