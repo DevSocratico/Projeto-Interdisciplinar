@@ -11,8 +11,8 @@
 }
 
 :root[data-theme='dark'] {
-    --cor-fundo-pagina: #1e1e1e;
-    --cor-fundo-menu: #5b5b5b;
+    --cor-fundo-pagina: #5b5b5b;
+    --cor-fundo-menu: #d9d9d9;
     --cor-texto: #fff;
 }
 
@@ -39,12 +39,10 @@ body {
 .menu .nav-link {
     border: 1px solid transparent;
     border-radius: 6px;
-    color: var(--cor-texto)!important;
 }
 
 .menu .nav-link:hover {
-    border-color: var(--cor-texto);
-    color: var(--cor-texto);
+    border-color: #000;
 }
 
 .menu .active {
@@ -54,17 +52,17 @@ body {
 /* footer */
 footer {
     background-color: var(--cor-fundo-menu);
-    color: var(--cor-texto);
+    color: #000;
 }
 
 footer a {
-    color: var(--cor-texto);
+    color: #000;
 }
 
 /* filtro */
 .filtro {
     background-color: var(--cor-fundo-menu);
-    color: var(--cor-texto);
+    color: #000;
 }
 
 /* modal */
