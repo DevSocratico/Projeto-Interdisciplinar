@@ -1,0 +1,61 @@
+﻿@model LocFarma.Models.Farmacia
+@inject IHttpContextAccessor context
+
+@{
+    ViewData["Title"] = "Editar Usuário";
+}
+
+<div class="mt-4">
+    <div class="row">
+        <partial name="_MenuLateralPartial" />
+
+        <!-- Alterar Farmácia -->
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-controller="Farmacia" asp-action="EditarFarmacia" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <hidden asp-for="Id"></hidden>
+                        <img src="~/imgs/perfil/@Model.NomeFoto" class="foto-edicao">
+                        <div class="form-group">
+                            <label asp-for="Foto" class="control-label"></label>
+                            <input asp-for="Foto" class="form-control" />
+                            <span asp-validation-for="Foto" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Nome" class="control-label"></label>
+                            <input asp-for="Nome" class="form-control" />
+                            <span asp-validation-for="Nome" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CNPJ" class="control-label"></label>
+                            <input asp-for="CNPJ" class="form-control" />
+                            <span asp-validation-for="CNPJ" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="margin: 10px 0;">
+                            @{
+                                var idTipoUsuario = context.HttpContext.Session.GetInt32("IdTipoUsuario") ?? 0;
+
+                                if (idTipoUsuario == 1)
+                                {
+                                    <a class="btn btn-secondary" asp-controller="Administrador" asp-action="Farmacias">Voltar</a>
+                                }
+                                else
+                                {
+                                    <a class="btn btn-secondary" asp-controller="Farmacia" asp-action="Perfil">Voltar</a>
+                                }
+                            }
+                            <input type="submit" value="Salvar" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

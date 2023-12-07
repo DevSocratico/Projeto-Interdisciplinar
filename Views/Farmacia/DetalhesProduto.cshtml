@@ -1,0 +1,65 @@
+﻿@model LocFarma.Models.Produto
+@inject IHttpContextAccessor context
+
+@{
+    ViewData["Title"] = "Detalhes do Produto";
+}
+
+<div class="mt-4">
+    <div class="row">
+        <partial name="_MenuLateralPartial" />
+
+        <!-- Detalhes Produto -->
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-12">
+                        <div class="card-body">
+                            <dl class="row">
+                                <dd class="col-sm-12">
+                                    <img src="~/imgs/produtos/@Model.NomeFoto" alt="@Model.Nome" class="foto">
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.Nome)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.Nome)
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.Preco)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.Preco)
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.Quantidade)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.Quantidade)
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.Descricao)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.Descricao)
+                                </dd>
+                            </dl>
+                            @{
+                                var idTipoUsuario = context.HttpContext.Session.GetInt32("IdTipoUsuario") ?? 0;
+
+                                if (idTipoUsuario == 1)
+                                {
+                                    <a class="btn btn-secondary" asp-controller="Administrador" asp-action="Produtos">Voltar</a>
+                                }
+                                else
+                                {
+                                    <a class="btn btn-secondary" asp-controller="Farmacia" asp-action="Produtos">Voltar</a>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

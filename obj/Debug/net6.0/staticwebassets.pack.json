@@ -1,0 +1,465 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\LocFarma.bundle.scp.css",
+      "PackagePath": "staticwebassets\\LocFarma.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\css\\reset.css",
+      "PackagePath": "staticwebassets\\css\\reset.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\carousel\\mombora.jfif",
+      "PackagePath": "staticwebassets\\imgs\\carousel\\mombora.jfif"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\carousel\\saude_para_todos.jfif",
+      "PackagePath": "staticwebassets\\imgs\\carousel\\saude_para_todos.jfif"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\equipe\\kayro.jpg",
+      "PackagePath": "staticwebassets\\imgs\\equipe\\kayro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\equipe\\lucas.jpg",
+      "PackagePath": "staticwebassets\\imgs\\equipe\\lucas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\equipe\\paulo.jpg",
+      "PackagePath": "staticwebassets\\imgs\\equipe\\paulo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\equipe\\pedro.jpg",
+      "PackagePath": "staticwebassets\\imgs\\equipe\\pedro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\equipe\\rafael.jpg",
+      "PackagePath": "staticwebassets\\imgs\\equipe\\rafael.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\google_maps.png",
+      "PackagePath": "staticwebassets\\imgs\\google_maps.png"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\logo-mobile.png",
+      "PackagePath": "staticwebassets\\imgs\\logo-mobile.png"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\logotipo.png",
+      "PackagePath": "staticwebassets\\imgs\\logotipo.png"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\perfil\\29e6b038-505f-45f0-a46e-7eadf39ca88d-pedro.jpg",
+      "PackagePath": "staticwebassets\\imgs\\perfil\\29e6b038-505f-45f0-a46e-7eadf39ca88d-pedro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\perfil\\31c92104-9831-4bd7-8fcf-eaded03d9967-rafael.jpg",
+      "PackagePath": "staticwebassets\\imgs\\perfil\\31c92104-9831-4bd7-8fcf-eaded03d9967-rafael.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\perfil\\disk-farma.png",
+      "PackagePath": "staticwebassets\\imgs\\perfil\\disk-farma.png"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\perfil\\droga-raia.png",
+      "PackagePath": "staticwebassets\\imgs\\perfil\\droga-raia.png"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\perfil\\drogaven.png",
+      "PackagePath": "staticwebassets\\imgs\\perfil\\drogaven.png"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\perfil\\farmacia-uniao.png",
+      "PackagePath": "staticwebassets\\imgs\\perfil\\farmacia-uniao.png"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\perfil\\kayro.jpg",
+      "PackagePath": "staticwebassets\\imgs\\perfil\\kayro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\perfil\\lucas.jpg",
+      "PackagePath": "staticwebassets\\imgs\\perfil\\lucas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\perfil\\paulo.jpg",
+      "PackagePath": "staticwebassets\\imgs\\perfil\\paulo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\perfil\\pedro.jpg",
+      "PackagePath": "staticwebassets\\imgs\\perfil\\pedro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\perfil\\perfil.svg",
+      "PackagePath": "staticwebassets\\imgs\\perfil\\perfil.svg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\perfil\\rafael.jpg",
+      "PackagePath": "staticwebassets\\imgs\\perfil\\rafael.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\65ae7253-9170-434a-b100-e6a77007dae9-rafael.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\65ae7253-9170-434a-b100-e6a77007dae9-rafael.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\87063b23-fa06-48c2-828d-0e5987610f48-loratadina.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\87063b23-fa06-48c2-828d-0e5987610f48-loratadina.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\aceratum.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\aceratum.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\advil.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\advil.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\alivium.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\alivium.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\aspargil.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\aspargil.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\dipirona.jfif",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\dipirona.jfif"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\dipirona.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\dipirona.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\dorflex-max.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\dorflex-max.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\dorflex.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\dorflex.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\higie.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\higie.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\medicamento-disk-farma.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\medicamento-disk-farma.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\medicamento-generico-drogaven.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\medicamento-generico-drogaven.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\nutricore.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\nutricore.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\produto_padrao.svg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\produto_padrao.svg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\propolis.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\propolis.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos\\whey_protein_bar.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos\\whey_protein_bar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos_relacionados\\acnezil.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos_relacionados\\acnezil.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos_relacionados\\doricin.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos_relacionados\\doricin.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos_relacionados\\omega_3.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos_relacionados\\omega_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos_relacionados\\redoxon.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos_relacionados\\redoxon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos_relacionados\\vitamina_A.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos_relacionados\\vitamina_A.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos_relacionados\\vitamina_C.png",
+      "PackagePath": "staticwebassets\\imgs\\produtos_relacionados\\vitamina_C.png"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos_relacionados\\vitamina_D.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos_relacionados\\vitamina_D.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos_relacionados\\vitamina_E.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos_relacionados\\vitamina_E.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos_relacionados\\vitamina_K.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos_relacionados\\vitamina_K.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\imgs\\produtos_relacionados\\zinco.jpg",
+      "PackagePath": "staticwebassets\\imgs\\produtos_relacionados\\zinco.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\kayro\\Desktop\\LocFarma4\\LocFarma\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.LocFarma.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.LocFarma.props",
+      "PackagePath": "build\\LocFarma.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.LocFarma.props",
+      "PackagePath": "buildMultiTargeting\\LocFarma.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.LocFarma.props",
+      "PackagePath": "buildTransitive\\LocFarma.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

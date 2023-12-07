@@ -1,0 +1,38 @@
+﻿<!-- Modal Login -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/Usuario/Login" method="post">
+                    <input type="hidden" id="caminhoLogin" name="caminho" />
+                    <div class="mb-3 form-group">
+                        <label class="form-label">Usuário</label>
+                        <input type="text" class="form-control" name="email" placeholder="Digite seu usuário" autocomplete="email" pattern="[a-z0-9._%+\-]+@@[a-z0-9.\-]+\.[a-z]{2,}$" title="Insira um email válido" required>
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label class="form-label">Senha</label>
+                        <input type="password" class="form-control" name="senha" placeholder="Digite sua senha" autocomplete="senha" required>
+                    </div>
+                    <div class="mb-3">
+                        <a href="#">Recuperar senha</a>
+                    </div>
+                    <div class="mb-2 d-grid form-group">
+                        <button class="btn btn-primary" type="submit">Entrar</button>
+                    </div>
+                    <div class="mb-2 d-grid form-group">
+                        <a class="btn btn-secondary" data-bs-dismiss="modal" onclick="abrirModalCadastro();">Criar Conta</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var caminho = window.location.pathname
+    document.getElementById('caminhoLogin').value = caminho;
+</script>

@@ -1,0 +1,74 @@
+﻿@model LocFarma.Models.Endereco
+
+@{
+    ViewData["Title"] = "Detalhes do Endereço";
+}
+
+<div class="mt-4">
+    <div class="row">
+        <partial name="_MenuLateralPartial" />
+
+        <!-- Detalhes Endereço -->
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-12">
+                        <div class="card-body">
+                            <dl class="row">
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.NomeLocal)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.NomeLocal)
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.CEP)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.CEP)
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.Logradouro.Nome)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.Logradouro.Nome)
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.Logradouro.Bairro.Nome)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.Logradouro.Bairro.Nome)
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.Numero)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.Numero)
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.Complemento)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.Complemento)
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.Logradouro.Bairro.Cidade.Nome)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.Logradouro.Bairro.Cidade.Nome)
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.Logradouro.Bairro.Cidade.UF.Sigla)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.Logradouro.Bairro.Cidade.UF.Sigla)
+                                </dd>
+                            </dl>
+                            <a class="btn btn-secondary" asp-controller="Usuario" asp-action="Enderecos">Voltar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

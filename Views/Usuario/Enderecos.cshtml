@@ -1,0 +1,127 @@
+﻿@model IEnumerable<LocFarma.Models.Endereco>
+
+@{
+    ViewData["Title"] = "Endereços";
+}
+
+<a asp-controller="Usuario" asp-action="CadastrarEndereco" class="btn btn-primary mt-3">Novo Endereço</a>
+
+<div class="mt-4">
+    <div class="row">
+        <partial name="_MenuLateralPartial" />
+
+        <!-- Endereços -->
+        <div class="col-lg-9">
+            <div class="row">
+                <input id="filtroEndereco" class="form-control ms-3 mb-2 w-50" type="text" placeholder="Filtrar endereços">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-12">
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.NomeLocal)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.CEP)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Logradouro.Nome)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Logradouro.Bairro.Nome)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Numero)
+                                        </th>
+                                        @* <th>
+                                            @Html.DisplayNameFor(model => model.Complemento)
+                                        </th> *@
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Logradouro.Bairro.Cidade.Nome)
+                                        </th>
+                                        <th colspan="3" class="text-center">
+                                            Operações
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listaEnderecos">
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.NomeLocal)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.CEP)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Logradouro.Nome)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Logradouro.Bairro.Nome)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Numero)
+                                            </td>
+                                            @* <td>
+                                                @Html.DisplayFor(modelItem => item.Complemento)
+                                            </td> *@
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Logradouro.Bairro.Cidade.Nome) /
+                                                @Html.DisplayFor(modelItem => item.Logradouro.Bairro.Cidade.UF.Sigla)
+                                            </td>
+                                            <td class="d-flex flex-column text-center">
+                                                <a asp-controller="Usuario" asp-action="EditarEndereco" class="btn btn-warning edit operacoesEndereco mb-1" asp-route-id="@item.Id" title="Editar endereço">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                    </svg>
+                                                </a>
+                                                <a asp-controller="Usuario" asp-action="DetalhesEndereco" class="btn btn-success details operacoesEndereco mb-1" asp-route-id="@item.Id" title="Detalhes do endereço">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-text" viewBox="0 0 16 16">
+                                                        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                                                        <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                                                    </svg>
+                                                </a>
+                                                <a class="btn btn-danger operacoesEndereco mb-1" asp-controller="Usuario" asp-action="ExcluirEndereco" asp-route-id="@item.Id" onclick="return confirm('Deseja excluir este endereço?');" title="Excluir endereço">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#filtroEndereco').on('input', function () {
+                var textoFiltro = $(this).val().toLowerCase();
+
+                $('#listaEnderecos tr').each(function () {
+                    var textoLista = $(this).text().toLowerCase();
+
+                    if (textoLista.includes(textoFiltro)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+    </script>
+}

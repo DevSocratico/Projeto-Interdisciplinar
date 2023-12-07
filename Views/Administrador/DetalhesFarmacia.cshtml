@@ -1,0 +1,47 @@
+﻿@model LocFarma.Models.Farmacia
+
+@{
+    ViewData["Title"] = "Detalhes da Farmácia";
+}
+
+<div class="mt-4">
+    <div class="row">
+        <partial name="_MenuLateralPartial" />
+
+        <!-- Detalhes Farmácia -->
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-12">
+                        <div class="card-body">
+                            <dl class="row">
+                                <dd>
+                                    <img src="~/imgs/perfil/@Model.NomeFoto" class="foto">
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.Nome)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.Nome)
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.Email)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.Email)
+                                </dd>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.CNPJ)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.CNPJ)
+                                </dd>
+                            </dl> 
+                            <a class="btn btn-secondary" asp-controller="Administrador" asp-action="Farmacias">Voltar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

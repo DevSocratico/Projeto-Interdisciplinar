@@ -1,0 +1,71 @@
+﻿@model LocFarma.Models.Endereco
+
+@{
+    ViewData["Title"] = "Editar Endereço";
+}
+
+<div class="mt-4">
+    <div class="row">
+        <partial name="_MenuLateralPartial" />
+
+        <!-- Alterar Endereço -->
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-controller="Usuario" asp-action="EditarEndereco">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <hidden asp-for="Id"></hidden>
+                        <div class="form-group">
+                            <label asp-for="NomeLocal" class="control-label"></label>
+                            <input asp-for="NomeLocal" class="form-control" />
+                            <span asp-validation-for="NomeLocal" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CEP" class="control-label"></label>
+                            <input asp-for="CEP" class="form-control" />
+                            <span asp-validation-for="CEP" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Logradouro.Nome" class="control-label"></label>
+                            <input asp-for="Logradouro.Nome" class="form-control" />
+                            <span asp-validation-for="Logradouro.Nome" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Logradouro.Bairro.Nome" class="control-label"></label>
+                            <input asp-for="Logradouro.Bairro.Nome" class="form-control" />
+                            <span asp-validation-for="Logradouro.Bairro.Nome" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Numero" class="control-label"></label>
+                            <input asp-for="Numero" class="form-control" />
+                            <span asp-validation-for="Numero" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Complemento" class="control-label"></label>
+                            <input asp-for="Complemento" class="form-control" />
+                            <span asp-validation-for="Complemento" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Logradouro.Bairro.Cidade.Nome" class="control-label"></label>
+                            <input asp-for="Logradouro.Bairro.Cidade.Nome" class="form-control" />
+                            <span asp-validation-for="Logradouro.Bairro.Cidade.Nome" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Logradouro.Bairro.Cidade.UF.Sigla" class="control-label"></label>
+                            <input asp-for="Logradouro.Bairro.Cidade.UF.Sigla" class="form-control" />
+                            <span asp-validation-for="Logradouro.Bairro.Cidade.UF.Sigla" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="margin: 10px 0;">
+                            <a class="btn btn-secondary" asp-controller="Usuario" asp-action="Enderecos">Voltar</a>
+                            <input type="submit" value="Salvar" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

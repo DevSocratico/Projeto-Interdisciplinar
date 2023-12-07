@@ -1,0 +1,36 @@
+﻿<!-- Modal Contato -->
+<div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contatoModalLabel">Contato</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-controller="Administrador" asp-action="NovoLogContato" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Nome</label>
+                        <input class="form-control" name="nome" placeholder="Digite seu nome" autocomplete="nome" pattern="[A-Za-z]{2,}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input class="form-control" name="email" placeholder="Digite seu email" autocomplete="email" aria-required="true" pattern="[a-z0-9._%+\-]+@@[a-z0-9.\-]+\.[a-z]{2,}$" title="Insira um email válido" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensagem</label>
+                        <textarea class="form-control" name="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+                    </div>
+                    <input type="hidden" id="caminhoContato" name="caminho" />
+                    <div class="d-grid gap-2 mb-3">
+                        <input type="submit" value="Enviar" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var caminho = window.location.pathname
+    document.getElementById('caminhoContato').value = caminho;
+</script>

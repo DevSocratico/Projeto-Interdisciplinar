@@ -1,0 +1,83 @@
+﻿@model IEnumerable<LocFarma.Models.LogContato>
+
+@{
+    ViewData["Title"] = "Log Contato";
+}
+
+<div class="mt-4">
+    <div class="row">
+        <partial name="_MenuLateralPartial" />
+
+        <!-- Log Contato -->
+        <div class="col-lg-9">
+            <div class="row">
+                <input id="filtroLogContato" class="form-control ms-3 mb-2 w-50" type="text" placeholder="Filtrar log contato">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-12">
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Nome)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Email)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Mensagem)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.DataEnvio)
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listaLogContato">
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Nome)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Email)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Mensagem)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.DataEnvio)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#filtroLogContato').on('input', function () {
+                var textoFiltro = $(this).val().toLowerCase();
+
+                $('#listaLogContato tr').each(function () {
+                    var textoLista = $(this).text().toLowerCase();
+
+                    if (textoLista.includes(textoFiltro)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+    </script>
+}

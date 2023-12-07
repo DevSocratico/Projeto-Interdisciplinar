@@ -1,0 +1,61 @@
+﻿@{
+    int? tipoUsuario = ViewBag.TipoUsuario;
+}
+
+<!-- Menu Lateral -->
+<div class="col-lg-3">
+    <div class="px-3 py-3 mb-3 filtro">
+        <ul class="navbar-nav menu-perfil">
+            @if (tipoUsuario == 3)
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark px-2" asp-controller="Farmacia" asp-action="Perfil">Dados</a>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark px-2" asp-controller="Usuario" asp-action="Perfil">Dados</a>
+                </li>
+            }
+            @* <li class="nav-item">
+                <a class="nav-link text-dark" asp-controller="Chat" asp-action="Mensagens">Mensagens (Em Breve!)</a>
+            </li> *@
+            <li class="nav-item">
+                <a class="nav-link text-dark px-2" src="#">Mensagens (Em Breve!)</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark px-2" asp-controller="Usuario" asp-action="Enderecos">Endereços</a>
+            </li>
+
+            @if (tipoUsuario != null)
+            {
+                <!-- Produtos não aparece para Conta Pessoal, apenas para Adiministrador e Farmácia -->
+                @if (tipoUsuario != 2)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-2" asp-controller="Farmacia" asp-action="Produtos">Produtos</a>
+                    </li>
+                }
+
+                <!-- Usuários aparece apenas para Administrador -->
+                @if (tipoUsuario == 1)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-2" asp-controller="Administrador" asp-action="Usuarios">Usuários</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-2" asp-controller="Administrador" asp-action="Farmacias">Farmácias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-2" asp-controller="Administrador" asp-action="LogsContato">Log Contato</a>
+                    </li>
+                }
+            }
+
+            <li class="nav-item">
+                <a class="nav-link text-dark px-2" asp-controller="Usuario" asp-action="AlterarSenha">Alterar Senha</a>
+            </li>
+        </ul>
+    </div>
+</div>

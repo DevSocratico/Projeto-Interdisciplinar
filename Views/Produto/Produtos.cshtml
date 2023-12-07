@@ -1,0 +1,129 @@
+﻿@model IEnumerable<LocFarma.Models.Farmacia>
+
+@{
+    ViewData["Title"] = "Produtos";
+    var farmacias = ViewData["Farmacias"] as List<Farmacia>;
+}
+
+<div class="container-fluid mt-4">
+    <div class="row">
+        <!-- Filtro -->
+        <div class="col-lg-3">
+            <div class="px-5 py-3 mb-4 filtro">
+                <h4>Filtro</h4>
+                <div class="row mb-2">
+                    <div class="col-lg-12">
+                        <label>Farmácias</label>
+                    </div>
+                </div>
+                @foreach (var farmacia in farmacias)
+                {
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-check">
+                                <input class="form-check-input filtroFarmacia" type="checkbox" value="@farmacia.Nome">
+                                <label class="form-check-label" for="@farmacia.Nome">
+                                    @farmacia.Nome
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @* <div class="row mb-4">
+                    <div class="col-lg-12">
+                        <label for="ordenar">Ordenar por:</label>
+                        <select id="ordenar" class="form-select" aria-label="select">
+                            <option selected>Selecione</option>
+                            <option class="ordenarPreco" value="1" onselect="javascript:menorPreco();">Menor preço</option>
+                            <option class="ordenarPreco" value="2">Maior preço</option>
+                        </select>
+                    </div>
+                </div> *@
+                <div class="row mt-2">
+                    <div class="col-lg-12">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#mapModal">Localização</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Produtos -->
+        <div class="col-lg-9">
+            <div class="row mb-2">
+                <div class="col d-flex flex-row align-items-center">
+                    <label for="ordenar" class="me-2">Ordenar por:</label>
+                    <select id="ordenaPreco" name="ordenar" class="form-select">
+                        <option selected>-- Selecione --</option>
+                        <option value="1">Menor preço</option>
+                        <option value="2">Maior preço</option>
+                    </select>
+                </div>
+            </div>
+            <div id="produtos" class="row">
+                @if (Model.Any())
+                {
+                    @foreach (var farmacia in Model)
+                    {
+                        @if (farmacia.Produtos != null)
+                        {
+                            @foreach (var produto in farmacia.Produtos)
+                            {
+                                <div class="col-md-4">
+                                    <div class="card mb-4">
+                                        <div class="text-center">
+                                            <img src="~/imgs/produtos/@produto.NomeFoto" class="produtos mt-3" alt="@produto.Nome">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">@produto.Nome</h5>
+                                            <p class="card-text">@farmacia.Nome</p>
+                                            <p class="card-text">R$ @produto.Preco</p>
+                                            <a asp-controller="Produto" asp-action="Produto" class="btn btn-primary edit" asp-route-id="@produto.Id">Ver Detalhes</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    <div class="col-md-12">
+                        <h3>Nenhum item encontrado!</h3>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<partial name="../Modals/ModalLocalizacao" />
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Filtra as farmácias
+            $('.filtroFarmacia').on('input', function () {
+                var farmacias = [];
+
+                $('.filtroFarmacia').each(function () {
+                    if ($(this).is(':checked')) {
+                        var nomeFarmacia = $(this).val().toLowerCase();
+                        farmacias.push(nomeFarmacia);
+                    }
+                });
+
+                $('#produtos .card').each(function () {
+                    var textoLista = $(this).text().toLowerCase();
+
+                    let filtro = farmacias.filter(f => textoLista.includes(f));
+
+                    if (filtro.length != 0 || farmacias.length == 0) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+    </script>
+}

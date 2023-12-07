@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=McLaren');
+
+/* variáveis */
+:root {
+    --cor-fundo-pagina: #e6f6eb;
+    --cor-fundo-menu: #f8f9fa;
+    --cor-texto: #000;
+    --cor-facebook-icone: #3b5998;
+    --cor-whatsapp-icone: #25d366;
+    --cor-botao-accordion: #f8f9fa;
+}
+
+:root[data-theme='dark'] {
+    --cor-fundo-pagina: #5b5b5b;
+    --cor-fundo-menu: #d9d9d9;
+    --cor-texto: #fff;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo-pagina);
+    /*color: var(--cor-texto);*/
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container, .container-fluid {
+    flex: 1 0 auto;
+}
+
+/* botões */
+.btn-primary {
+    background-color: #2b45f5;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2b45f5;
+}
+
+/* menu topo */
+.menu {
+    background-color: var(--cor-fundo-menu);
+}
+
+.menu .nav-link {
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+
+.menu .nav-link:hover {
+    border-color: #000;
+}
+
+.menu .active {
+    font-weight: bolder;
+}
+
+/* menu lateral (perfil) */
+.menu-perfil .nav-link {
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+
+.menu-perfil .nav-link:hover {
+    border-color: #000;
+}
+
+/* footer */
+footer {
+    background-color: var(--cor-fundo-menu);
+    color: #000;
+    flex-shrink: 0;
+}
+
+footer a {
+    color: #000;
+}
+
+/* filtro */
+.filtro {
+    background-color: var(--cor-fundo-menu);
+    color: #000;
+}
+
+/* modal */
+.modal {
+    color: #000;
+}
+
+/* fonte títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'McLaren', sans-serif;
+}
+
+/* imagem do carousel */
+.carousel-item img {
+    height: 350px;
+}
+
+/* imagem do card */
+.card .produtos {
+    width: 175px;
+    height: 175px;
+}
+
+.card .foto {
+    width: 175px;
+    height: 175px;
+}
+
+.card .fotos {
+    width: 50px;
+    height: 50px;
+}
+
+.card .produto-relacionado {
+    height: 250px;
+}
+
+.card .equipe {
+    height: 250px;
+}
+
+/* imagem edição do usuário */
+.foto-edicao {
+    width: 100px;
+    height: 100px;
+}
+
+/* cor de fundo do card */
+.card {
+    background-color: var(--cor-fundo-menu);
+}
+
+/* imagem produto (ver detalhes) */
+.produto-detalhe {
+    height: 400px;
+}
+
+/* cores ícones */
+.cor-facebook-icone {
+    background-color: var(--cor-facebook-icone);
+}
+
+.cor-whatsapp-icone {
+    background-color: var(--cor-whatsapp-icone);
+}
+
+/* accordion */
+.accordion-button {
+    background-color: var(--cor-botao-accordion);
+    color: #000;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--cor-botao-accordion);
+    color: #000;
+}
+
+/* chat */
+#chat-icon {
+    position: fixed;
+    bottom: 120px;
+    right: 40px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.chat {
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    width: 350px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 1;
+    display: none;
+    color: #000;
+}
+
+.chat .chat-header {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+
+.chat .chat-body {
+    padding: 10px;
+    height: 300px;
+}
+
+.chat .chat-footer {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-chat {
+    cursor: pointer;
+}
+
+/* google maps */
+#map {
+    width: 100%;
+    height: 350px;
+    border: 1px solid black;
+}
+
+/* modal alerta */
+#alertaModal.modal.show {
+    display: flex!important;
+    top: 30px;
+}
+
+/* ordenar por preço */
+#ordenaPreco {
+    width: 142px;
+}
+
+/* tamanho ícones operações endereço */
+.operacoesEndereco {
+    width: 42px;
+}
+
+/* campo inválido (muda cor da borda) */
+/*input:required:invalid {
+    border-color: #c00000;
+}*/

@@ -1,0 +1,180 @@
+﻿@using LocFarma.Repositories.ADO.SQLServer
+@inject IHttpContextAccessor context
+
+@{
+    var idUsuario = context.HttpContext.Session.GetInt32("IdUsuario") ?? 0;
+    var locaisFarmacias = ViewData["LocaisFarmacias"] as List<List<Endereco>>;
+}
+
+<!-- Modal Localização -->
+<div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mapModalLabel">Filtrar Farmácias pela Localização</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-7 mb-3 mx-2">
+                        <div class="row">
+                            <label>Endereço:</label>
+                        </div>
+                        <div class="row">
+                            <div class="d-flex">
+                                <input id="endereco" type="text" class="form-control" placeholder="Digite seu endereço">
+                                <a class="ms-2 mt-1" onclick="buscarEndereco()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    @if(idUsuario != 0)
+                    {
+                        <div class="col-4">
+                            <div class="row">
+                                <label>Meus locais:</label>
+                            </div>
+                            <div class="row">
+                                <select id="local" class="form-select" name="local" title="Locais cadastrados no seu perfil" onchange="selecionarEndereco()">
+                                    <option selected="selected" value="">-- Selecione --</option>
+
+                                    @foreach (var endereco in UsuarioDAO.GetLocaisEnderecos(idUsuario))
+                                    {
+                                        <option value="@endereco.Id" value="@endereco.NomeLocal">@endereco.NomeLocal</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="row text-center">
+                    <div id="map"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="submit">Filtrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var map;
+    function initMap() {
+        var mapOptions = {
+            center: { lat: -21.6175176355165, lng: -48.36032570169707 },
+            zoom: 15,
+        };
+
+        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        // marcador
+        const marker = new google.maps.Marker({
+            position: { lat: -21.6175176355165, lng: -48.36032570169707 },
+            map: map,
+            title: 'Fatec Matão'
+        });
+
+        // janela de informação
+        let infoWindow = new google.maps.InfoWindow({
+            content: 'Fatec Matão'
+        });
+
+        infoWindow.open(map, marker);
+
+        // abre janela de informação ao clicar no marcador
+        marker.addListener('click', () => {
+            infoWindow.open(map, marker);
+        });
+
+        // delimitador de busca
+        const circulo = new google.maps.Circle({
+            strokeColor: "#FF0000",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#FF0000",
+            fillOpacity: 0.35,
+            map,
+            center: { lat: -21.6175176355165, lng: -48.36032570169707 },
+            radius: 1000,
+            editable: true
+        });
+    }
+
+    function buscarEndereco(end = '') {
+        var endereco;
+
+        if (end != '')
+            endereco = end;
+        else {
+            endereco = document.getElementById('endereco').value;
+            var select = document.getElementById("local");
+            if (select != null) select.selectedIndex = 0;
+        }
+
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({ 'address': endereco }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                var latitude = results[0].geometry.location.lat();
+                var longitude = results[0].geometry.location.lng();
+
+                var mapOptions = {
+                    center: new google.maps.LatLng(latitude, longitude),
+                    zoom: 15,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(latitude, longitude),
+                    map: map,
+                    title: endereco
+                });
+
+                // janela de informação
+                let infoWindow = new google.maps.InfoWindow({
+                    content: endereco
+                });
+
+                infoWindow.open(map, marker);
+
+                // abre janela de informação ao clicar no marcador
+                marker.addListener('click', () => {
+                    infoWindow.open(map, marker);
+                });
+
+                // delimitador de busca
+                const circulo = new google.maps.Circle({
+                    strokeColor: "#FF0000",
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: "#FF0000",
+                    fillOpacity: 0.35,
+                    map,
+                    center: { lat: latitude, lng: longitude },
+                    radius: 1000,
+                    editable: true
+                });
+            }
+            else {
+                alert('Não foi possível encontrar o endereço: ' + status);
+            }
+        });
+    }
+
+    function selecionarEndereco() {
+        var select = document.getElementById("local");
+        var enderecoSelecionado = select.options[select.selectedIndex].value;
+
+        // var locaisFarmacias = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(@locaisFarmacias));
+        // console.log(locaisFarmacias);
+        buscarEndereco(enderecoSelecionado);
+    }
+</script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhRy1RiyhQXIMVDh-AE9SyAgSfqk0OpRM&callback=initMap">
+</script>

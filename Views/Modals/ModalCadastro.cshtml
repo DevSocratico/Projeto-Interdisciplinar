@@ -1,0 +1,97 @@
+﻿<!-- Modal Cadastro -->
+<div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cadastroModalLabel">Cadastro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mt-5 mb-3 d-grid">
+                        <a class="btn btn-primary" data-bs-dismiss="modal" onclick="abrirModalCadastroContaPessoal();">Conta Pessoal</a>
+                    </div>
+                    <div class="mb-5 d-grid">
+                        <a class="btn btn-primary" data-bs-dismiss="modal" onclick="abrirModalCadastroFarmacia();">Farmácia</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Cadastro Conta Pessoal -->
+<div class="modal fade" id="cadastroContaPessoalModal" tabindex="-1" aria-labelledby="cadastroContaPessoalModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cadastroContaPessoalModalLabel">Cadastro Conta Pessoal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/Usuario/CadastrarContaPessoal" method="post">
+                    <input type="hidden" id="caminhoCadastroContaPessoal" name="caminho" />
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" pattern="[a-z0-9._%+\-]+@@[a-z0-9.\-]+\.[a-z]{2,}$" title="Insira um email válido" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="senha" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                               title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 8 ou mais caracteres" required>
+                    </div>
+                    <div class="mb-2 d-grid">
+                        <button class="btn btn-primary" type="submit">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Cadastro Farmácia -->
+<div class="modal fade" id="cadastroFarmaciaModal" tabindex="-1" aria-labelledby="cadastroFarmaciaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cadastroFarmaciaModalLabel">Cadastro Farmácia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/Usuario/CadastrarFarmacia" method="post">
+                    <input type="hidden" id="caminhoCadastroFarmacia" name="caminho" />
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" name="nome" placeholder="Digite o nome da farmácia" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" name="email" placeholder="Digite seu e-mail" pattern="[a-z0-9._%+\-]+@@[a-z0-9.\-]+\.[a-z]{2,}$" title="Insira um email válido" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="senha" class="form-label">Senha</label>
+                        <input type="password" class="form-control" name="senha" placeholder="Digite sua senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                               title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 8 ou mais caracteres" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cnpj" class="form-label">CNPJ</label>
+                        <input type="text" class="form-control" name="cnpj" placeholder="Digite seu CNPJ" pattern="\d{14}" title="Insira um CNPJ válido" required>
+                    </div>
+                    <div class="mb-2 d-grid">
+                        <button class="btn btn-primary" type="submit">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var caminho = window.location.pathname
+    document.getElementById('caminhoCadastroContaPessoal').value = caminho;
+    document.getElementById('caminhoCadastroFarmacia').value = caminho;
+</script>

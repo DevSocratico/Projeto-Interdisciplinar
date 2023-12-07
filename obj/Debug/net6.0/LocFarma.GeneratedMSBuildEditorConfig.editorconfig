@@ -1,0 +1,193 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LocFarma
+build_property.RootNamespace = LocFarma
+build_property.ProjectDir = C:\Users\kayro\Desktop\LocFarma4\LocFarma\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\kayro\Desktop\LocFarma4\LocFarma
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Administrador/DetalhesFarmacia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxEZXRhbGhlc0Zhcm1hY2lhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Administrador/DetalhesUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxEZXRhbGhlc1VzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Administrador/Farmacias.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxGYXJtYWNpYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Administrador/LogsContato.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxMb2dzQ29udGF0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Administrador/Produtos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxQcm9kdXRvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Administrador/Usuarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYWRvclxVc3Vhcmlvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Farmacia/CadastrarProduto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFybWFjaWFcQ2FkYXN0cmFyUHJvZHV0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Farmacia/DetalhesProduto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFybWFjaWFcRGV0YWxoZXNQcm9kdXRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Farmacia/EditarFarmacia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFybWFjaWFcRWRpdGFyRmFybWFjaWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Farmacia/EditarProduto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFybWFjaWFcRWRpdGFyUHJvZHV0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Farmacia/Perfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFybWFjaWFcUGVyZmlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Farmacia/Produtos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFybWFjaWFcUHJvZHV0b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Home/Sobre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTb2JyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Modals/ModalAlerta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kYWxzXE1vZGFsQWxlcnRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Modals/ModalCadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kYWxzXE1vZGFsQ2FkYXN0cm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Modals/ModalContato.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kYWxzXE1vZGFsQ29udGF0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Modals/ModalLocalizacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kYWxzXE1vZGFsTG9jYWxpemFjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Modals/ModalLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kYWxzXE1vZGFsTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Produto/Produto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xQcm9kdXRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Produto/Produtos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xQcm9kdXRvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Shared/_MenuLateralPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51TGF0ZXJhbFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Usuario/AlterarSenha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xBbHRlcmFyU2VuaGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Usuario/CadastrarEndereco.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDYWRhc3RyYXJFbmRlcmVjby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Usuario/DetalhesEndereco.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZXRhbGhlc0VuZGVyZWNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Usuario/EditarEndereco.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0YXJFbmRlcmVjby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Usuario/EditarUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0YXJVc3VhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Usuario/Enderecos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFbmRlcmVjb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Usuario/Perfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xQZXJmaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kayro/Desktop/LocFarma4/LocFarma/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-z9qtpoiyyl
