@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Menu -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <nav class="navbar navbar-expand-lg navbar-light menu">
         <a class="navbar-brand d-none d-md-block d-lg-block ms-2" href="index.html">
             <img src="imgs/logotipo.png" alt="Logotipo">
         </a>
@@ -18,7 +18,7 @@
             <img src="imgs/logo-mobile.png" alt="Logo Mobile">
         </a>
         <form class="d-flex justify-content-center w-50" method="GET" action="produtos.html">
-            <input class="form-control me-2 w-50" type="search" name="pesquisa" id="barraPesquisa" placeholder="Pesquisar produtos" aria-label="Search">
+            <input class="form-control me-2 w-50" type="search" name="search" id="barraPesquisa" placeholder="Pesquisar produtos" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
         </form>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,14 +33,48 @@
                     <a class="nav-link" href="sobre.html">Sobre Nós</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contatoModal">Contato</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Entrar</a>
                 </li>
             </ul>
+            <div class="form-check form-switch ms-2">
+                <input class="form-check-input" type="checkbox" id="modo-noturno">
+            </div>
         </div>
     </nav>
+
+    <!-- Modal Contato -->
+    <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contatoModalLabel">Contato</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" placeholder="Digite seu nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Digite sua mensagem"></textarea>
+                        </div>
+                        <div class="d-grid gap-2 mb-3">
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal Login -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -64,10 +98,98 @@
                             <a href="#">Recuperar senha</a>
                         </div>
                         <div class="mb-2 d-grid">
-                            <button class="btn btn-primary" type="submit">Entrar</button>
+                            <a class="btn btn-primary">Entrar</a>
                         </div>
                         <div class="mb-2 d-grid">
-                            <button class="btn btn-secondary" type="submit">Criar conta</button>
+                            <a class="btn btn-secondary" data-bs-dismiss="modal" onclick="abrirModalCadastro();">Criar Conta</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro -->
+    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Cadastro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mt-5 mb-3 d-grid">
+                            <a class="btn btn-primary" data-bs-dismiss="modal" onclick="abrirModalCadastroContaPessoal();">Conta Pessoal</a>
+                        </div>
+                        <div class="mb-5 d-grid">
+                            <a class="btn btn-primary" data-bs-dismiss="modal" onclick="abrirModalCadastroFarmacia();">Farmácia</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro Conta Pessoal -->
+    <div class="modal fade" id="cadastroContaPessoalModal" tabindex="-1" aria-labelledby="cadastroContaPessoalModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroContaPessoalModalLabel">Cadastro Conta Pessoal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Usuário</label>
+                            <input type="text" class="form-control" id="username" placeholder="Digite seu usuário">
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+                        </div>
+                        <div class="mb-2 d-grid">
+                            <a class="btn btn-primary">Cadastrar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro Farmácia -->
+    <div class="modal fade" id="cadastroFarmaciaModal" tabindex="-1" aria-labelledby="cadastroFarmaciaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroFarmaciaModalLabel">Cadastro Farmácia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Usuário</label>
+                            <input type="text" class="form-control" id="username" placeholder="Digite seu usuário">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cnpj" class="form-label">CNPJ</label>
+                            <input type="text" class="form-control" id="cnpj" placeholder="Digite seu CNPJ">
+                        </div>
+                        <div class="mb-2 d-grid">
+                            <a class="btn btn-primary">Cadastrar</a>
                         </div>
                     </form>
                 </div>
@@ -80,7 +202,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="mapModalLabel">Filtrar farmácias pela localização</h5>
+                    <h5 class="modal-title" id="mapModalLabel">Filtrar Farmácias pela Localização</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -88,8 +210,8 @@
                         <div class="mb-3">
                             <input type="text" class="form-control" id="place" placeholder="Digite seu endereço">
                         </div>
-                        <div class="mb-3">
-                            <img src="imgs/google-maps.png" alt="Google Maps" width="100%" height="350px">
+                        <div class="mb-3 text-center">
+                            <img src="imgs/google_maps.png" alt="Google Maps" class="img-fluid">
                         </div>
                     </form>
                 </div>
@@ -104,7 +226,7 @@
         <div class="row">
             <!-- Filtro -->
             <div class="col-lg-3">
-                <div class="px-5 py-3 mb-3 bg-light">
+                <div class="px-5 py-3 mb-3 filtro">
                 <h4>Filtro</h4>
                 <div class="row mb-2">
                     <div class="col-lg-12">
@@ -146,6 +268,16 @@
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#mapModal">Localização</a>
                     </div>
                 </div>
+                <div class="row mb-4">
+                    <div class="col-lg-12">
+                        <label for="ordenar">Ordenar por:</label>
+                        <select id="ordenar" class="form-select" aria-label="select">
+                            <option selected>Selecione</option>
+                            <option value="1">Menor preço</option>
+                            <option value="2">Maior preço</option>
+                        </select>
+                    </div>
+                </div>
             </div></div>
 
             <!-- Produtos -->
@@ -153,9 +285,9 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img src="imgs/produtos/produto1.jpg" class="card-img-top" alt="Produto 1">
+                            <img src="imgs/produtos/aspargil.jpg" class="card-img-top" alt="Produto 1">
                             <div class="card-body">
-                                <h5 class="card-title">APIzepam</h5>
+                                <h5 class="card-title">Aspargil C</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -163,9 +295,9 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img src="imgs/produtos/produto2.jpg" class="card-img-top" alt="Produto 2">
+                            <img src="imgs/produtos/dipirona.jfif" class="card-img-top" alt="Produto 2">
                             <div class="card-body">
-                                <h5 class="card-title">Loopamol</h5>
+                                <h5 class="card-title">Dipirona Sódica</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -173,9 +305,9 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img src="imgs/produtos/produto3.jpg" class="card-img-top" alt="Produto 3">
+                            <img src="imgs/produtos/loratadina.jpg" class="card-img-top" alt="Produto 3">
                             <div class="card-body">
-                                <h5 class="card-title">Gitoxin</h5>
+                                <h5 class="card-title">Loratadina</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -183,9 +315,9 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img src="imgs/produtos/produto4.jpg" class="card-img-top" alt="Produto 4">
+                            <img src="imgs/produtos/aceratum.jpg" class="card-img-top" alt="Produto 4">
                             <div class="card-body">
-                                <h5 class="card-title">Pythonquil</h5>
+                                <h5 class="card-title">Aceratum</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -193,9 +325,9 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img src="imgs/produtos/produto5.jpg" class="card-img-top" alt="Produto 5">
+                            <img src="imgs/produtos/advil.jpg" class="card-img-top" alt="Produto 5">
                             <div class="card-body">
-                                <h5 class="card-title">SQLarox</h5>
+                                <h5 class="card-title">Advil</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -203,9 +335,9 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img src="imgs/produtos/produto6.jpg" class="card-img-top" alt="Produto 6">
+                            <img src="imgs/produtos/alivium.jpg" class="card-img-top" alt="Produto 6">
                             <div class="card-body">
-                                <h5 class="card-title">Exceptionex</h5>
+                                <h5 class="card-title">Alivium</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -216,7 +348,7 @@
         </div>
     </div>
 
-    <footer class="bg-light text-dark text-center py-4 mt-5">
+    <footer class="text-center py-4 mt-5">
         <!-- Footer Desktop -->
         <div class="container d-none d-md-block d-lg-block">
             <div class="row">
@@ -229,7 +361,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col-sm-6">
-                    <a href="mailto:contato@locfarma.com" class="text-dark mx-2">contato@locfarma.com</a>
+                    <a href="mailto:contato@locfarma.com" class="mx-2">contato@locfarma.com</a>
                 </div>
                 <div class="col-sm-6">
                     <a class="btn btn-primary cor-facebook-icone" href="#!" role="button">
@@ -241,7 +373,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col-sm-6">
-                    <a href="tel:+1540028922" class="text-dark mx-2">(15) 4002-8922</a>
+                    <a href="tel:+1540028922" class="mx-2">(15) 4002-8922</a>
                 </div>
                 <div class="col-sm-6">
                     <a class="btn btn-success cor-whatsapp-icone" href="#!" role="button">
@@ -259,10 +391,10 @@
                 <h5>Contato:</h5>
             </div>
             <div class="row mt-2">
-                <a href="mailto:contato@locfarma.com" class="text-dark mx-2">contato@locfarma.com</a>
+                <a href="mailto:contato@locfarma.com" class="mx-2">contato@locfarma.com</a>
             </div>
             <div class="row mt-2">
-                <a href="tel:+1540028922" class="text-dark mx-2">(15) 4002-8922</a>
+                <a href="tel:+1540028922" class="mx-2">(15) 4002-8922</a>
             </div>
             <div class="row mt-2">
                 <h5>Redes Sociais:</h5>
@@ -289,6 +421,7 @@
     </footer>
 
     <script src="bootstrap-5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const pesquisa = urlParams.get('search');

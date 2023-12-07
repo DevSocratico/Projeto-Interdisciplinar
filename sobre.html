@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Menu -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <nav class="navbar navbar-expand-lg navbar-light menu">
         <a class="navbar-brand d-none d-md-block d-lg-block ms-2" href="index.html">
             <img src="imgs/logotipo.png" alt="Logotipo">
         </a>
@@ -33,14 +33,48 @@
                     <a class="nav-link active" aria-current="page" href="#">Sobre Nós</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contatoModal">Contato</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Entrar</a>
                 </li>
             </ul>
+            <div class="form-check form-switch ms-2">
+                <input class="form-check-input" type="checkbox" id="modo-noturno">
+            </div>
         </div>
     </nav>
+
+    <!-- Modal Contato -->
+    <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contatoModalLabel">Contato</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" placeholder="Digite seu nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Digite sua mensagem"></textarea>
+                        </div>
+                        <div class="d-grid gap-2 mb-3">
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal Login -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -64,10 +98,98 @@
                             <a href="#">Recuperar senha</a>
                         </div>
                         <div class="mb-2 d-grid">
-                            <button class="btn btn-primary" type="submit">Entrar</button>
+                            <a class="btn btn-primary">Entrar</a>
                         </div>
                         <div class="mb-2 d-grid">
-                            <button class="btn btn-secondary" type="submit">Criar conta</button>
+                            <a class="btn btn-secondary" data-bs-dismiss="modal" onclick="abrirModalCadastro();">Criar Conta</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro -->
+    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Cadastro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mt-5 mb-3 d-grid">
+                            <a class="btn btn-primary" data-bs-dismiss="modal" onclick="abrirModalCadastroContaPessoal();">Conta Pessoal</a>
+                        </div>
+                        <div class="mb-5 d-grid">
+                            <a class="btn btn-primary" data-bs-dismiss="modal" onclick="abrirModalCadastroFarmacia();">Farmácia</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro Conta Pessoal -->
+    <div class="modal fade" id="cadastroContaPessoalModal" tabindex="-1" aria-labelledby="cadastroContaPessoalModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroContaPessoalModalLabel">Cadastro Conta Pessoal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Usuário</label>
+                            <input type="text" class="form-control" id="username" placeholder="Digite seu usuário">
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+                        </div>
+                        <div class="mb-2 d-grid">
+                            <a class="btn btn-primary">Cadastrar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro Farmácia -->
+    <div class="modal fade" id="cadastroFarmaciaModal" tabindex="-1" aria-labelledby="cadastroFarmaciaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroFarmaciaModalLabel">Cadastro Farmácia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Usuário</label>
+                            <input type="text" class="form-control" id="username" placeholder="Digite seu usuário">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cnpj" class="form-label">CNPJ</label>
+                            <input type="text" class="form-control" id="cnpj" placeholder="Digite seu CNPJ">
+                        </div>
+                        <div class="mb-2 d-grid">
+                            <a class="btn btn-primary">Cadastrar</a>
                         </div>
                     </form>
                 </div>
@@ -78,27 +200,51 @@
     <!-- Sobre Nós -->
     <div class="container mt-4">
         <h1 class="text-center">Sobre Nós</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida massa eget arcu fringilla,
-            ac consequat velit suscipit. In sed elit orci. Nullam ullamcorper sagittis lacus eget rhoncus. Aliquam
-            maximus lacus vel finibus sagittis. Integer id venenatis dui, sed iaculis turpis. Mauris tempus viverra
-            metus vitae vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-            Curae; Proin elementum enim vel finibus auctor. Suspendisse in ipsum eleifend, ultricies enim a, tempor
-            odio. Ut hendrerit massa id lacus pharetra scelerisque. Etiam cursus interdum elit, eu finibus turpis
-            fringilla in. Phasellus tincidunt venenatis fringilla. Curabitur congue metus in risus rhoncus, vel
-            malesuada eros rhoncus. Mauris efficitur mauris sit amet leo aliquet feugiat.</p>
-        <p>Phasellus ut nulla eu odio pharetra efficitur. Donec accumsan libero risus, a iaculis ex interdum eget.
-            Nulla facilisi. Praesent fringilla libero at odio placerat, a scelerisque neque cursus. Fusce ut sapien
-            ex. In dapibus feugiat felis at volutpat. Curabitur vehicula accumsan enim non lacinia. Sed vestibulum
-            vestibulum mi, at aliquam nulla cursus non. Aenean pretium nisi id magna semper, ac consectetur nisl
-            vestibulum. In dictum pulvinar odio, a finibus nunc. Fusce a pulvinar metus. Sed at sem in tellus
-            pellentesque rhoncus.</p>
-        <h2>Equipe</h2>
+        <div class="accordion" id="accordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Missão
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <p>Facilitar a vida da população, especialmente daqueles que enfrentam dificuldades de locomoção e dos menos privilegiados, fornecendo informações sobre a disponibilidade e os preços de medicamentos em diferentes estabelecimentos, por meio de um aplicativo inovador. A missão é promover melhorias no bem-estar social e oferecer uma ferramenta eficaz para melhorar a vida das pessoas, especialmente no acesso a medicamentos escassos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Visão
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <p>Ser uma solução eficiente e prática para a comunidade, eliminando a necessidade de realizar inúmeras chamadas telefônicas na busca de medicamentos escassos. O aplicativo visa otimizar os recursos pessoais e financeiros dos usuários, além de promover a inclusão social ao atender às necessidades daqueles com dificuldades de locomoção. A visão é promover um impacto positivo na qualidade de vida dos usuários, fornecendo informações sobre o custo-benefício dos medicamentos disponíveis em diferentes estabelecimentos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Valores
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <p>Compromisso com a sociedade, equidade no acesso a medicamentos, melhoria do bem-estar social, facilidade de acesso à informação, conscientização na tomada de decisões, promoção da inclusão social e valorização dos recursos pessoais e financeiros dos usuários.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="mt-3">Equipe</h2>
         <div class="row">
             <div class="col-sm-3">
                 <div class="card my-3">
                     <img class="equipe" src="imgs/equipe/kayro.jpg" alt="Kayro">
                     <div class="card-body">
-                        <h5 class="card-title">Kayro</h5>
+                        <h5 class="card-title">Kayro César</h5>
                         <p class="card-text">Líder</p>
                     </div>
                 </div>
@@ -107,7 +253,7 @@
                 <div class="card my-3">
                     <img class="equipe" src="imgs/equipe/lucas.jpg" alt="Lucas">
                     <div class="card-body">
-                        <h5 class="card-title">Lucas</h5>
+                        <h5 class="card-title">Lucas Rodrigues</h5>
                         <p class="card-text">Desenvolvedor</p>
                     </div>
                 </div>
@@ -116,7 +262,7 @@
                 <div class="card my-3">
                     <img class="equipe" src="imgs/equipe/paulo.jpg" alt="Paulo">
                     <div class="card-body">
-                        <h5 class="card-title">Paulo</h5>
+                        <h5 class="card-title">Paulo Selestrino</h5>
                         <p class="card-text">Gestor de Projetos</p>
                     </div>
                 </div>
@@ -125,7 +271,7 @@
                 <div class="card my-3">
                     <img class="equipe" src="imgs/equipe/pedro.jpg" alt="Pedro">
                     <div class="card-body">
-                        <h5 class="card-title">Pedro</h5>
+                        <h5 class="card-title">Pedro Rodrigues</h5>
                         <p class="card-text">Analista de Qualidade</p>
                     </div>
                 </div>
@@ -133,7 +279,7 @@
         </div>
     </div>
 
-    <footer class="bg-light text-dark text-center py-4 mt-5">
+    <footer class="text-center py-4 mt-5">
         <!-- Footer Desktop -->
         <div class="container d-none d-md-block d-lg-block">
             <div class="row">
@@ -146,7 +292,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col-sm-6">
-                    <a href="mailto:contato@locfarma.com" class="text-dark mx-2">contato@locfarma.com</a>
+                    <a href="mailto:contato@locfarma.com" class="mx-2">contato@locfarma.com</a>
                 </div>
                 <div class="col-sm-6">
                     <a class="btn btn-primary cor-facebook-icone" href="#!" role="button">
@@ -158,7 +304,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col-sm-6">
-                    <a href="tel:+1540028922" class="text-dark mx-2">(15) 4002-8922</a>
+                    <a href="tel:+1540028922" class="mx-2">(15) 4002-8922</a>
                 </div>
                 <div class="col-sm-6">
                     <a class="btn btn-success cor-whatsapp-icone" href="#!" role="button">
@@ -176,10 +322,10 @@
                 <h5>Contato:</h5>
             </div>
             <div class="row mt-2">
-                <a href="mailto:contato@locfarma.com" class="text-dark mx-2">contato@locfarma.com</a>
+                <a href="mailto:contato@locfarma.com" class="mx-2">contato@locfarma.com</a>
             </div>
             <div class="row mt-2">
-                <a href="tel:+1540028922" class="text-dark mx-2">(15) 4002-8922</a>
+                <a href="tel:+1540028922" class="mx-2">(15) 4002-8922</a>
             </div>
             <div class="row mt-2">
                 <h5>Redes Sociais:</h5>
@@ -206,5 +352,6 @@
     </footer>
 
     <script src="bootstrap-5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

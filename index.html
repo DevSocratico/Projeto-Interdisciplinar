@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Menu -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <nav class="navbar navbar-expand-lg navbar-light menu">
         <a class="navbar-brand d-none d-md-block d-lg-block ms-2" href="#">
             <img src="imgs/logotipo.png" alt="Logotipo">
         </a>
@@ -33,14 +33,48 @@
                     <a class="nav-link" href="sobre.html">Sobre Nós</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contatoModal">Contato</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Entrar</a>
                 </li>
             </ul>
+            <div class="form-check form-switch ms-2">
+                <input class="form-check-input" type="checkbox" id="modo-noturno">
+            </div>
         </div>
     </nav>
+
+    <!-- Modal Contato -->
+    <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contatoModalLabel">Contato</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" placeholder="Digite seu nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Digite sua mensagem"></textarea>
+                        </div>
+                        <div class="d-grid gap-2 mb-3">
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal Login -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -64,10 +98,98 @@
                             <a href="#">Recuperar senha</a>
                         </div>
                         <div class="mb-2 d-grid">
-                            <button class="btn btn-primary" type="submit">Entrar</button>
+                            <a class="btn btn-primary">Entrar</a>
                         </div>
                         <div class="mb-2 d-grid">
-                            <button class="btn btn-secondary" type="submit">Criar conta</button>
+                            <a class="btn btn-secondary" data-bs-dismiss="modal" onclick="abrirModalCadastro();">Criar Conta</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro -->
+    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Cadastro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mt-5 mb-3 d-grid">
+                            <a class="btn btn-primary" data-bs-dismiss="modal" onclick="abrirModalCadastroContaPessoal();">Conta Pessoal</a>
+                        </div>
+                        <div class="mb-5 d-grid">
+                            <a class="btn btn-primary" data-bs-dismiss="modal" onclick="abrirModalCadastroFarmacia();">Farmácia</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro Conta Pessoal -->
+    <div class="modal fade" id="cadastroContaPessoalModal" tabindex="-1" aria-labelledby="cadastroContaPessoalModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroContaPessoalModalLabel">Cadastro Conta Pessoal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Usuário</label>
+                            <input type="text" class="form-control" id="username" placeholder="Digite seu usuário">
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+                        </div>
+                        <div class="mb-2 d-grid">
+                            <a class="btn btn-primary">Cadastrar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro Farmácia -->
+    <div class="modal fade" id="cadastroFarmaciaModal" tabindex="-1" aria-labelledby="cadastroFarmaciaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroFarmaciaModalLabel">Cadastro Farmácia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Usuário</label>
+                            <input type="text" class="form-control" id="username" placeholder="Digite seu usuário">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cnpj" class="form-label">CNPJ</label>
+                            <input type="text" class="form-control" id="cnpj" placeholder="Digite seu CNPJ">
+                        </div>
+                        <div class="mb-2 d-grid">
+                            <a class="btn btn-primary">Cadastrar</a>
                         </div>
                     </form>
                 </div>
@@ -77,12 +199,16 @@
 
     <!-- Carousel -->
     <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="imgs/carousel/pharmacy.jpg" class="d-block w-100" alt="Produto 1">
+                <img src="imgs/carousel/mombora.jfif" class="d-block w-100" alt="Produto 1">
             </div>
             <div class="carousel-item">
-                <img src="imgs/carousel/medicines.jpg" class="d-block w-100" alt="Produto 2">
+                <img src="imgs/carousel/saude_para_todos.jfif" class="d-block w-100" alt="Produto 2">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-bs-slide="prev">
@@ -103,9 +229,9 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="card my-3">
-                    <img src="imgs/destaques/caixa-remedio.jpg" alt="Produto 1">
+                    <img src="imgs/destaques/nutricore.jpg" alt="Produto 1">
                     <div class="card-body">
-                        <h5 class="card-title">Codexil</h5>
+                        <h5 class="card-title">NutriCore Zen</h5>
                         <p class="card-text">R$ 0,00</p>
                         <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                     </div>
@@ -113,9 +239,9 @@
             </div>
             <div class="col-sm-3">
                 <div class="card my-3">
-                    <img src="imgs/destaques/caixa-remedio2.jpg" alt="Produto 2">
+                    <img src="imgs/destaques/higie.jpg" alt="Produto 2">
                     <div class="card-body">
-                        <h5 class="card-title">Byteprazol</h5>
+                        <h5 class="card-title">Higie+</h5>
                         <p class="card-text">R$ 0,00</p>
                         <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                     </div>
@@ -123,9 +249,9 @@
             </div>
             <div class="col-sm-3">
                 <div class="card my-3">
-                    <img src="imgs/destaques/caixa-remedio3.jpg" alt="Produto 3">
+                    <img src="imgs/destaques/propolis.jpg" alt="Produto 3">
                     <div class="card-body">
-                        <h5 class="card-title">Syntaxicil</h5>
+                        <h5 class="card-title">Propolis</h5>
                         <p class="card-text">R$ 0,00</p>
                         <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                     </div>
@@ -133,9 +259,9 @@
             </div>
             <div class="col-sm-3">
                 <div class="card my-3">
-                    <img src="imgs/destaques/caixa-remedio4.jpg" alt="Produto 4">
+                    <img src="imgs/destaques/whey_protein_bar.jpg" alt="Produto 4">
                     <div class="card-body">
-                        <h5 class="card-title">Debugamine</h5>
+                        <h5 class="card-title">Whey Protein Bar</h5>
                         <p class="card-text">R$ 0,00</p>
                         <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                     </div>
@@ -144,7 +270,7 @@
         </div>
     </div>
 
-    <footer class="bg-light text-dark text-center py-4 mt-5">
+    <footer class="text-center py-4 mt-5">
         <!-- Footer Desktop -->
         <div class="container d-none d-md-block d-lg-block">
             <div class="row">
@@ -157,7 +283,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col-sm-6">
-                    <a href="mailto:contato@locfarma.com" class="text-dark mx-2">contato@locfarma.com</a>
+                    <a href="mailto:contato@locfarma.com" class="mx-2">contato@locfarma.com</a>
                 </div>
                 <div class="col-sm-6">
                     <a class="btn btn-primary cor-facebook-icone" href="#!" role="button">
@@ -169,7 +295,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col-sm-6">
-                    <a href="tel:+1540028922" class="text-dark mx-2">(15) 4002-8922</a>
+                    <a href="tel:+1540028922" class="mx-2">(15) 4002-8922</a>
                 </div>
                 <div class="col-sm-6">
                     <a class="btn btn-success cor-whatsapp-icone" href="#!" role="button">
@@ -187,10 +313,10 @@
                 <h5>Contato:</h5>
             </div>
             <div class="row mt-2">
-                <a href="mailto:contato@locfarma.com" class="text-dark mx-2">contato@locfarma.com</a>
+                <a href="mailto:contato@locfarma.com" class="mx-2">contato@locfarma.com</a>
             </div>
             <div class="row mt-2">
-                <a href="tel:+1540028922" class="text-dark mx-2">(15) 4002-8922</a>
+                <a href="tel:+1540028922" class="mx-2">(15) 4002-8922</a>
             </div>
             <div class="row mt-2">
                 <h5>Redes Sociais:</h5>
@@ -217,5 +343,6 @@
     </footer>
 
     <script src="bootstrap-5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

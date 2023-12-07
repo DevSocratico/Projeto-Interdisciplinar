@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Menu -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <nav class="navbar navbar-expand-lg navbar-light menu">
         <a class="navbar-brand d-none d-md-block d-lg-block ms-2" href="index.html">
             <img src="imgs/logotipo.png" alt="Logotipo">
         </a>
@@ -33,14 +33,48 @@
                     <a class="nav-link" href="sobre.html">Sobre Nós</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contatoModal">Contato</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Entrar</a>
                 </li>
             </ul>
+            <div class="form-check form-switch ms-2">
+                <input class="form-check-input" type="checkbox" id="modo-noturno">
+            </div>
         </div>
     </nav>
+
+    <!-- Modal Contato -->
+    <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contatoModalLabel">Contato</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" placeholder="Digite seu nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Digite sua mensagem"></textarea>
+                        </div>
+                        <div class="d-grid gap-2 mb-3">
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal Login -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -64,10 +98,98 @@
                             <a href="#">Recuperar senha</a>
                         </div>
                         <div class="mb-2 d-grid">
-                            <button class="btn btn-primary" type="submit">Entrar</button>
+                            <a class="btn btn-primary">Entrar</a>
                         </div>
                         <div class="mb-2 d-grid">
-                            <button class="btn btn-secondary" type="submit">Criar conta</button>
+                            <a class="btn btn-secondary" data-bs-dismiss="modal" onclick="abrirModalCadastro();">Criar Conta</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro -->
+    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Cadastro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mt-5 mb-3 d-grid">
+                            <a class="btn btn-primary" data-bs-dismiss="modal" onclick="abrirModalCadastroContaPessoal();">Conta Pessoal</a>
+                        </div>
+                        <div class="mb-5 d-grid">
+                            <a class="btn btn-primary" data-bs-dismiss="modal" onclick="abrirModalCadastroFarmacia();">Farmácia</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro Conta Pessoal -->
+    <div class="modal fade" id="cadastroContaPessoalModal" tabindex="-1" aria-labelledby="cadastroContaPessoalModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroContaPessoalModalLabel">Cadastro Conta Pessoal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Usuário</label>
+                            <input type="text" class="form-control" id="username" placeholder="Digite seu usuário">
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+                        </div>
+                        <div class="mb-2 d-grid">
+                            <a class="btn btn-primary">Cadastrar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro Farmácia -->
+    <div class="modal fade" id="cadastroFarmaciaModal" tabindex="-1" aria-labelledby="cadastroFarmaciaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroFarmaciaModalLabel">Cadastro Farmácia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Usuário</label>
+                            <input type="text" class="form-control" id="username" placeholder="Digite seu usuário">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cnpj" class="form-label">CNPJ</label>
+                            <input type="text" class="form-control" id="cnpj" placeholder="Digite seu CNPJ">
+                        </div>
+                        <div class="mb-2 d-grid">
+                            <a class="btn btn-primary">Cadastrar</a>
                         </div>
                     </form>
                 </div>
@@ -78,22 +200,26 @@
     <!-- Produto -->
     <div class="container mt-4">
         <div class="row">
+            <div class="col-lg-6 text-center">
+                <img src="imgs/produtos/aspargil.jpg" alt="Produto" class="border produto-detalhe">
+            </div>
             <div class="col-lg-6">
-                <img src="imgs/produtos/produto1.jpg" alt="Produto" class="border">
-            </div>
-            <div class="col-lg-3">
-                <h2>APIzepam</h2>
-                <h4>R$ 0,00</h4>
-            </div>
-            <div class="col-lg-3">
-                <h5>2 disponíveis</h5>
-                <button class="btn btn-primary">Ler Bula</button>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-lg-6">
-                <h4>Detalhe</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque semper purus feugiat, efficitur ante quis, pulvinar nunc. Nunc velit orci, dapibus in lobortis eget, convallis quis risus. Vivamus sit amet egestas sem. Praesent aliquam auctor urna ut molestie. Nunc eu elit et ex congue facilisis porttitor vitae sapien. Ut sit amet ornare justo, venenatis consectetur purus. Sed pulvinar, libero quis vehicula pellentesque, nisi mauris pellentesque massa, a vulputate felis enim id augue. Sed imperdiet quam nec nulla sodales porta. In vel vulputate orci.</p>
+                <div class="row">
+                    <div class="col-sm-6 mt-2">
+                        <h2>Aspargil C</h2>
+                        <p class="h4">R$ 0,00</p>
+                    </div>
+                    <div class="col-sm-6 mt-2">
+                        <h5>2 disponíveis</h5>
+                        <button class="btn btn-primary">Ler Bula</button>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-12">
+                        <h4>Descrição</h4>
+                        <p>O Aspargil C é um suplemento vitamínico indicado para auxiliar no funcionamento do sistema imunológico, ajudando a fortalecer o sistema imune.</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row mt-4">
@@ -110,9 +236,9 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-sm-2">
                         <div class="card my-3">
-                            <img class="produto-relacionado" src="imgs/produtos_relacionados/produto1.jpg" alt="Produto 1">
+                            <img class="produto-relacionado" src="imgs/produtos_relacionados/redoxon.jpg" alt="Produto 1">
                             <div class="card-body">
-                                <h5 class="card-title">JavaGel</h5>
+                                <h5 class="card-title">Redoxon</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -120,9 +246,9 @@
                     </div>
                     <div class="col-sm-2">
                         <div class="card my-3">
-                            <img class="produto-relacionado" src="imgs/produtos_relacionados/produto2.jpg" alt="Produto 2">
+                            <img class="produto-relacionado" src="imgs/produtos_relacionados/vitamina_A.jpg" alt="Produto 2">
                             <div class="card-body">
-                                <h5 class="card-title">Regexifen</h5>
+                                <h5 class="card-title">Vitamina A</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -130,9 +256,9 @@
                     </div>
                     <div class="col-sm-2">
                         <div class="card my-3">
-                            <img class="produto-relacionado" src="imgs/produtos_relacionados/produto3.jpg" alt="Produto 3">
+                            <img class="produto-relacionado" src="imgs/produtos_relacionados/vitamina_C.png" alt="Produto 3">
                             <div class="card-body">
-                                <h5 class="card-title">CSSerol</h5>
+                                <h5 class="card-title">Vitamina C</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -140,9 +266,9 @@
                     </div>
                     <div class="col-sm-2">
                         <div class="card my-3">
-                            <img class="produto-relacionado" src="imgs/produtos_relacionados/produto4.jpg" alt="Produto 4">
+                            <img class="produto-relacionado" src="imgs/produtos_relacionados/vitamina_D.jpg" alt="Produto 4">
                             <div class="card-body">
-                                <h5 class="card-title">Frameworkal</h5>
+                                <h5 class="card-title">Vitamina D3</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -150,9 +276,9 @@
                     </div>
                     <div class="col-sm-2">
                         <div class="card my-3">
-                            <img class="produto-relacionado" src="imgs/produtos_relacionados/produto5.jpg" alt="Produto 5">
+                            <img class="produto-relacionado" src="imgs/produtos_relacionados/acnezil.jpg" alt="Produto 5">
                             <div class="card-body">
-                                <h5 class="card-title">Javacrillin</h5>
+                                <h5 class="card-title">Acnezil</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -164,9 +290,9 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-sm-2">
                         <div class="card my-3">
-                            <img class="produto-relacionado" src="imgs/produtos_relacionados/produto6.jpg" alt="Produto 6">
+                            <img class="produto-relacionado" src="imgs/produtos_relacionados/vitamina_E.jpg" alt="Produto 6">
                             <div class="card-body">
-                                <h5 class="card-title">HTMLanium</h5>
+                                <h5 class="card-title">Vitamina E</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -174,9 +300,9 @@
                     </div>
                     <div class="col-sm-2">
                         <div class="card my-3">
-                            <img class="produto-relacionado" src="imgs/produtos_relacionados/produto7.jpg" alt="Produto 7">
+                            <img class="produto-relacionado" src="imgs/produtos_relacionados/vitamina_K.jpg" alt="Produto 7">
                             <div class="card-body">
-                                <h5 class="card-title">PHPamol</h5>
+                                <h5 class="card-title">Vitamina K2</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -184,9 +310,9 @@
                     </div>
                     <div class="col-sm-2">
                         <div class="card my-3">
-                            <img class="produto-relacionado" src="imgs/produtos_relacionados/produto8.jpg" alt="Produto 8">
+                            <img class="produto-relacionado" src="imgs/produtos_relacionados/zinco.jpg" alt="Produto 8">
                             <div class="card-body">
-                                <h5 class="card-title">JSONadol</h5>
+                                <h5 class="card-title">Vitamina E</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -194,9 +320,9 @@
                     </div>
                     <div class="col-sm-2">
                         <div class="card my-3">
-                            <img class="produto-relacionado" src="imgs/produtos_relacionados/produto9.jpg" alt="Produto 9">
+                            <img class="produto-relacionado" src="imgs/produtos_relacionados/omega_3.jpg" alt="Produto 9">
                             <div class="card-body">
-                                <h5 class="card-title">Nodezolam</h5>
+                                <h5 class="card-title">Ômega 3</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -204,9 +330,9 @@
                     </div>
                     <div class="col-sm-2">
                         <div class="card my-3">
-                            <img class="produto-relacionado" src="imgs/produtos_relacionados/produto10.jpg" alt="Produto 10">
+                            <img class="produto-relacionado" src="imgs/produtos_relacionados/doricin.jpg" alt="Produto 10">
                             <div class="card-body">
-                                <h5 class="card-title">UXetrin</h5>
+                                <h5 class="card-title">Doricin</h5>
                                 <p class="card-text">R$ 0,00</p>
                                 <a href="produto.html" class="btn btn-primary">Ver Detalhes</a>
                             </div>
@@ -226,22 +352,29 @@
     </div>
 
     <!-- Chat -->
-    <div class="chat">
-        <div class="chat-header" data-bs-toggle="collapse" href="#chat">
+    <div id="chat-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+            <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+        </svg>
+    </div>
+
+    <div id="chat" class="chat">
+        <div class="chat-header">
             Chat
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x close-chat close float-end" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
         </div>
-        <div id="chat" class="collapse show">
-            <div class="chat-body">
-                Envie uma mensagem para a farmácia.
-            </div>
-            <div class="chat-footer">
-                <input type="text" class="form-control me-2" placeholder="Digite uma mensagem">
-                <button class="btn btn-primary">Enviar</button>
-            </div>
+        <div class="chat-body">
+            Envie uma mensagem para a farmácia.
+        </div>
+        <div class="chat-footer">
+            <input type="text" class="form-control me-2" placeholder="Digite uma mensagem">
+            <button class="btn btn-primary">Enviar</button>
         </div>
     </div>
 
-    <footer class="bg-light text-dark text-center py-4 mt-5">
+    <footer class="text-center py-4 mt-5">
         <!-- Footer Desktop -->
         <div class="container d-none d-md-block d-lg-block">
             <div class="row">
@@ -254,7 +387,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col-sm-6">
-                    <a href="mailto:contato@locfarma.com" class="text-dark mx-2">contato@locfarma.com</a>
+                    <a href="mailto:contato@locfarma.com" class="mx-2">contato@locfarma.com</a>
                 </div>
                 <div class="col-sm-6">
                     <a class="btn btn-primary cor-facebook-icone" href="#!" role="button">
@@ -266,7 +399,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col-sm-6">
-                    <a href="tel:+1540028922" class="text-dark mx-2">(15) 4002-8922</a>
+                    <a href="tel:+1540028922" class="mx-2">(15) 4002-8922</a>
                 </div>
                 <div class="col-sm-6">
                     <a class="btn btn-success cor-whatsapp-icone" href="#!" role="button">
@@ -284,10 +417,10 @@
                 <h5>Contato:</h5>
             </div>
             <div class="row mt-2">
-                <a href="mailto:contato@locfarma.com" class="text-dark mx-2">contato@locfarma.com</a>
+                <a href="mailto:contato@locfarma.com" class="mx-2">contato@locfarma.com</a>
             </div>
             <div class="row mt-2">
-                <a href="tel:+1540028922" class="text-dark mx-2">(15) 4002-8922</a>
+                <a href="tel:+1540028922" class="mx-2">(15) 4002-8922</a>
             </div>
             <div class="row mt-2">
                 <h5>Redes Sociais:</h5>
@@ -314,5 +447,17 @@
     </footer>
 
     <script src="bootstrap-5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        document.getElementById("chat-icon").addEventListener("click", function() {
+            document.getElementById("chat-icon").style.display = "none";
+            document.getElementById("chat").style.display = "block";
+        });
+    
+        document.querySelector(".close").addEventListener("click", function() {
+            document.getElementById("chat-icon").style.display = "block";
+            document.getElementById("chat").style.display = "none";
+        });
+    </script>
 </body>
 </html>

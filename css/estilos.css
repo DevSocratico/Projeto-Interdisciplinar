@@ -3,19 +3,81 @@
 /* variáveis */
 :root {
     --cor-fundo-pagina: #e6f6eb;
+    --cor-fundo-menu: #f8f9fa;
+    --cor-texto: #000;
     --cor-facebook-icone: #3b5998;
     --cor-whatsapp-icone: #25d366;
+    --cor-botao-accordion: #f8f9fa;
+}
+
+:root[data-theme='dark'] {
+    --cor-fundo-pagina: #5b5b5b;
+    --cor-fundo-menu: #d9d9d9;
+    --cor-texto: #fff;
 }
 
 body {
     background-color: var(--cor-fundo-pagina);
-    font-family: 'McLaren', sans-serif;
+    color: var(--cor-texto);
     height: 100%;
+}
+
+/* botões */
+.btn-primary {
+    background-color: #2b45f5;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2b45f5;
+}
+
+/* menu */
+.menu {
+    background-color: var(--cor-fundo-menu);
+}
+
+.menu .nav-link {
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+
+.menu .nav-link:hover {
+    border-color: #000;
+}
+
+.menu .active {
+    font-weight: bolder;
+}
+
+/* footer */
+footer {
+    background-color: var(--cor-fundo-menu);
+    color: #000;
+}
+
+footer a {
+    color: #000;
+}
+
+/* filtro */
+.filtro {
+    background-color: var(--cor-fundo-menu);
+    color: #000;
+}
+
+/* modal */
+.modal {
+    color: #000;
+}
+
+/* fonte títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'McLaren', sans-serif;
 }
 
 /* imagem do carousel */
 .carousel-item img {
-    height: 300px;
+    height: 350px;
 }
 
 /* imagem do card */
@@ -31,6 +93,11 @@ body {
     height: 250px;
 }
 
+/* imagem produto (ver detalhes) */
+.produto-detalhe {
+    height: 400px;
+}
+
 /* cores ícones */
 .cor-facebook-icone {
     background-color: var(--cor-facebook-icone);
@@ -40,7 +107,26 @@ body {
     background-color: var(--cor-whatsapp-icone);
 }
 
+/* accordion */
+.accordion-button {
+    background-color: var(--cor-botao-accordion);
+    color: #000;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--cor-botao-accordion);
+    color: #000;
+}
+
 /* chat */
+#chat-icon {
+    position: fixed;
+    bottom: 120px;
+    right: 40px;
+    cursor: pointer;
+    z-index: 1;
+}
+
 .chat {
     position: fixed;
     bottom: 0px;
@@ -50,13 +136,14 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     z-index: 1;
+    display: none;
+    color: #000;
 }
 
 .chat .chat-header {
     padding: 10px;
     background-color: #f5f5f5;
     border-bottom: 1px solid #ccc;
-    cursor: pointer;
 }
 
 .chat .chat-body {
@@ -70,4 +157,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.close-chat {
+    cursor: pointer;
 }
