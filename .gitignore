@@ -1,2 +1,2 @@
 .gitignore
-Views/Modals/ModalLocalizacao.cshtml
+/Views/Modals/ModalLocalizacao.cshtml
